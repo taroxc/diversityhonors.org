@@ -1,0 +1,218 @@
+// Import required styles
+@import '../node_modules/spectre.css/src/spectre.scss';
+@import url('https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=STIX+Two+Math&display=swap');
+
+// Base
+body {
+    background: #121212;
+    color: #444;
+    font-family: 'Open Sans', sans-serif;
+}
+
+// Typography
+h1, h2, h3, h4, h5 {
+    font-family: 'News Cycle', sans-serif;
+}
+h5 {
+    font-weight: 600;
+}
+.serif {
+    font-family: 'STIX Two Math', serif; 
+}
+.gradient {
+    background: -webkit-linear-gradient(#bababa 0%, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+// Utility
+.center {
+    text-align: center;
+}
+.img-center {
+    display: block;
+    margin: 0 auto;
+}
+
+// Layout
+.content-wrap {
+    margin-top: -17rem;
+    padding-bottom: 1rem;
+}
+.backsplash {
+    background-image: url('../img/header.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 342px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+section {
+    padding: 1rem;
+}
+
+// Page Elements
+.header-logo {
+    display: block;
+    height: 105px;
+    transform: translate(0, 0.75rem);
+}
+header {
+    border-radius: 0.25rem 0.25rem 0 0;
+    background: linear-gradient(#4a4c4c, #232323);
+    box-shadow: 0 1px 0 rgba(255,255,255,0.99),0 0 1px rgba(0,0,0,0.3),0 0 1px rgba(255,255,255,0.2) inset;
+    .navbar-toggle {
+        display: none;
+    }
+    .navbar-section {
+        padding: 0 1rem;
+    }
+    .btn.btn-link {
+        margin: 0.5rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #EEE;
+        font-size: 0.5rem;
+        letter-spacing: 1px;
+    }
+    .btn.btn-link:focus, .btn.btn-link:hover, .btn.btn-link:active, .btn.btn-link.active {
+        color: #FFF;
+        background: rgba($color: #000000, $alpha: 0.25);
+    }
+}
+main {
+    background: #FFF;
+    img.header {
+        width: 100%;
+        height: auto;
+        border: solid 2px rgba($color: #FFF, $alpha: 0.80);
+        border-radius: 0.25rem;
+        box-shadow: 0px 5px 8px rgba($color: #000000, $alpha: 0.25);
+    }
+    .column img {
+        margin: 0 auto;
+    }
+    p {
+        font-size: 0.75rem;
+    }
+}
+aside {
+    padding-right: 1rem;
+    border-right: 1px solid #DDD;
+    h4 {
+        margin: 0;
+    }
+    .nav{
+        display: block;
+        margin-left: 0.5rem;
+        margin-bottom: 0.5rem;
+        .nav-item {
+            a {
+                font-size: 0.75rem;
+                color: #888;
+                padding: 0;
+            }
+            a:focus, a:hover {
+                color: #333;
+            }
+        }
+    }
+}
+footer {
+    padding: 1rem;
+    color: #EEE;
+    background: #2a2a2a;
+    border-radius: 0 0 0.25rem 0.25rem;
+    h5 {
+        text-transform: uppercase;
+        font-weight: 600;
+        margin: 0.25rem;
+    }
+    p {
+        margin: 0;
+    }
+    a, a:hover, a:active, a:focus, a:visited {
+        color: red;
+        text-transform: uppercase;
+    }
+}
+
+// Responsive Breakpoints
+@media (max-width: 1280px) {
+    aside {
+        background-color: #EEE;
+        padding: 0.5rem;
+        border: 0;
+        border-radius: 0.5rem;
+        margin-bottom: 1rem;
+    }
+}
+@media (max-width: 720px) {
+    .navbar {
+        .navbar-toggle {
+            display: block;
+        }
+        .navbar-section {
+            display: none;
+            padding: 0;
+        }
+        .btn.btn-link {
+            width: 100%;
+            margin: 0.5rem 0;
+            font-size: 0.65rem;
+            font-weight: 600;
+            img {
+                padding-right: 0.25rem;
+            }
+        }
+    }
+    .col-xl-auto, .col-lg-auto, .col-md-auto, .col-sm-auto, .col-xs-auto {
+        width: 100%;
+    }
+
+}
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.825rem;
+        margin-bottom: 0.5rem;
+        text-align: center;
+    }
+    h5 {
+        margin: 1rem 0;
+        font-size: 1.25rem;
+        text-align: center;
+    }
+    aside {
+        padding: 1rem;
+        .nav-item {
+            text-align: center;
+        }
+    }
+    .content-wrap {
+        margin-top: -17.75rem;   
+    }
+    .gradient {
+        background: -webkit-linear-gradient(#444, #444);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;    
+    }
+    .header-logo {
+        height: 80px;
+        margin: 0 auto;
+    }
+    // iframe {
+    //     display: block;
+    //     width: 100%;
+    //     height: auto;
+    //     margin-bottom: 1rem;
+    // }
+    section, footer {
+        padding: 0.5rem;
+    }
+    footer {
+        p {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+    }
+}

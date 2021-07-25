@@ -2,16 +2,11 @@
   "name": "diversityhonors.com",
   "version": "1.0.0",
   "description": "",
-  "main": "generator/makesite.py",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/taroxc/diversityhonors.com.git"
   },
   "devDependencies": {
-    "grunt": "^1.4.1",
     "sass": "^1.35.2"
   },
   "dependencies": {
