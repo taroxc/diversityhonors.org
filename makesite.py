@@ -153,7 +153,7 @@ def main():
     # Default parameters.
     params = {
         'base_path': '',
-        'subtitle': 'Lorem Ipsum',
+        'subtitle': 'Diversity Honors',
         'site_url': 'http://localhost:8000',
         'current_year': datetime.datetime.now().year
     }
@@ -162,14 +162,22 @@ def main():
     if os.path.isfile('params.json'):
         params.update(json.loads(fread('params.json')))
 
-    # Load layouts.
-    page_layout = fread('layout.html')
+    # Load layouts and templates.
+    page_layout = fread('template/layout.html')
+    about_layout = fread('template/about.html')
+
+    # Inject template into base layout.
+    about_layout = render(page_layout, content=about_layout)
+
 
     # Create site pages.
     make_pages('content/_index.html', '_site/index.html',
                page_layout, **params)
     make_pages('content/[!_]*.html', '_site/{{ slug }}/index.html',
                page_layout, **params)
+    about_pages = make_pages('content/about/*.html',
+                '_site/{{ slug }}/index.html',
+                about_layout, stream='about', **params)
 
 # Test parameter to be set temporarily by unit tests.
 _test = None
