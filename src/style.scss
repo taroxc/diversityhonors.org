@@ -156,6 +156,7 @@ footer {
     }
     .slides > div {
         scroll-snap-align: start;
+        border-radius: 0.25rem;
         flex-shrink: 0;
         width: 100%;
         height: 300px;
@@ -168,6 +169,7 @@ footer {
         align-items: center;
     }
     .slides img {
+        border-radius: 0.25rem;
         object-fit: cover;
         position: absolute;
         top: 0;
@@ -203,11 +205,16 @@ footer {
 // Responsive Breakpoints
 @media (max-width: 1280px) {
     aside {
-        background-color: #EEE;
+        background-color: #F8F8F8;
         padding: 0.5rem;
         border: 0;
         border-radius: 0.5rem;
         margin-bottom: 1rem;
+    }
+    .slider {
+        .slides > div {
+            height: 600px;
+        }
     }
 }
 @media (max-width: 720px) {
@@ -235,7 +242,6 @@ footer {
     .col-xl-auto, .col-lg-auto, .col-md-auto, .col-sm-auto, .col-xs-auto {
         width: 100%;
     }
-
 }
 @media (max-width: 480px) {
     h1 {
@@ -265,6 +271,9 @@ footer {
     .header-logo {
         height: 80px;
         margin: 0 auto;
+    }
+    .slides > div {
+        height: 300px;
     }
     section, footer {
         padding: 0.5rem;
