@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{{ base_path }}/css/style.css">
+    <link rel="stylesheet" type="text/css" href="{{ base_path }}/css/flickity.css">
 </head>
 
 <body id="{{ slug }}">
@@ -49,6 +50,7 @@
             <span class="copyright-text">© {{ current_year }} - Website developed by <a href="https://tired.monster/">Tired Monster Studios</a> in collaboration with <a href="https://goodmanpr.com/">Goodman Public Relations</a></span>
         </div>
     </div>
+    <script src="{{ base_path }}/js/flickity.pkgd.min.js"></script>
     <script>
         function navbarToggle() {
           var x = document.getElementById("navbarLinks");
@@ -58,6 +60,12 @@
             x.style.display = "block";
           }
         }
+
+        var flkty = new Flickity( '.img-gallery', {
+            // options
+            cellAlign: 'left',
+            contain: true
+        });
     </script>
 </body>
 </html>
