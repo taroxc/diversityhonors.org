@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{{ base_path }}/css/style.css">
     <link rel="stylesheet" type="text/css" href="{{ base_path }}/css/flickity.css">
+    <!-- <link rel="stylesheet" type="text/css" href="{{ base_path }}/css/fullscreen.css"> -->
 </head>
 
 <body id="{{ slug }}">
@@ -51,6 +52,7 @@
         </div>
     </div>
     <script src="{{ base_path }}/js/flickity.pkgd.min.js"></script>
+    <!-- <script src="{{ base_path }}/js/fullscreen.js"></script> -->
     <script>
         function navbarToggle() {
           var x = document.getElementById("navbarLinks");
@@ -64,6 +66,10 @@
         var flkty = new Flickity( '.img-gallery', {
             // options
             cellAlign: 'left',
+            autoPlay: true,
+            // fullscreen: true,
+            adaptiveHeight: true,
+            wrapAround: true,
             contain: true
         });
     </script>
