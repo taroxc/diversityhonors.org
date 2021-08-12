@@ -154,7 +154,7 @@ def main():
     params = {
         'base_path': '',
         'subtitle': 'Diversity Honors',
-        'site_url': 'http://localhost:8000',
+        'site_url': 'http://diversityhonors.tired.monster/',
         'current_year': datetime.datetime.now().year
     }
 
