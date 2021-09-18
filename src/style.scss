@@ -5,7 +5,7 @@
 // Base
 body {
     background: #121212;
-    color: #666;
+    color: #555;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -58,7 +58,7 @@ h5 {
     margin: 0 auto;
 }
 section {
-    padding: 1rem;
+    padding-bottom: 1rem;
 }
 
 // Page Elements
@@ -187,6 +187,31 @@ footer {
 
 // Page Specific Styles
 // Home
+#_index {
+    .column h5 {
+        padding-top: 1rem;
+    }
+}
+#date {
+    color: #8344A3;
+}
+#itinerary {
+    color: #8344A3;
+    font-weight: 700;
+    font-size: 18px;
+    max-width: 520px;
+    margin: 0 auto;
+    ul {
+        list-style: none;
+    }
+}
+#featured {
+    font-weight: 700;
+    text-align: center;
+    p {
+        font-size: 18px;
+    }
+}
 .img-harvey {
     padding: 0 2rem;
 }
