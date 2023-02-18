@@ -3390,7 +3390,7 @@ a.text-error:visited {
 
 body {
   background: #121212;
-  color: #555;
+  color: #444;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -3407,7 +3407,7 @@ h5 {
 }
 
 .gradient {
-  background: -webkit-linear-gradient(#bababa 0%, #333);
+  background: -webkit-linear-gradient(#999999 0%, #333);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -3597,23 +3597,10 @@ footer a, footer a:hover, footer a:active, footer a:focus, footer a:visited {
 }
 
 .featured {
+  padding: 1rem 0;
   font-weight: 700;
   text-align: center;
-}
-.featured p {
   font-size: 18px;
-}
-
-.img-harvey {
-  padding: 0 2rem;
-}
-
-.img-hard-rock {
-  padding: 0 1rem;
-}
-
-.img-dmk {
-  padding: 0 4.5rem;
 }
 
 @media (max-width: 840px) {
